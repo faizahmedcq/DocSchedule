@@ -14,7 +14,17 @@ import BuyMedicinesBanner from './components/BuyMedicinesBanner'; // Import the 
 import RecentBlogs from './components/RecentBlogs'; // Import the new component
 import SymptomsDepartmentView from './components/Consultation/SymptomsDepartmentView';
 import Search from './components/Search/AvailableDoctors';
-import ProfilePage from './components/DcotorDetailsView/ProfilePage';
+import ProfilePage from './components/DcotorDetailsView/ProfilePage'
+
+// login and signup components
+import LoginUser from './components/Login/LoginUser'; // Import the login component
+import SignupUser from './components/Login/SignupUser'; // Import the signup component
+import DoctorLoginPage from './components/Login/DoctorLoginPage'; // Import the doctor login component
+import DoctorRegistrationPage from './components/Login/DoctorRegistrationPage';
+import DoctorDashboardPage from './components/DashboardDoctor/DoctorDashboardPage';
+
+// Import other necessary components
+// import Footer from './components/Footer'; // Uncomment if you have a Footer component
 // ... other components
 
 function App() {
@@ -39,7 +49,21 @@ function App() {
             <Route path="/symptoms-department-views" element={<SymptomsDepartmentView />} />
             <Route path="/search" element={<Search />} />
             <Route path="/doctor-profile-view" element={<ProfilePage />} />
+
+
+            {/* Login and Doctor SignUp */}
+            <Route path="/login" element={<LoginUser />} />
+            <Route path="/signup" element={<SignupUser />} />
+            <Route path="/doctor-login" element={<DoctorLoginPage />} />
+            <Route path="/doctor-registration" element={<DoctorRegistrationPage />} />
             {/* Add other routes here */}
+
+            {/* DoctorDashboard */}
+
+            <Route path="/doctor-dashboard" element={<DoctorDashboardPage />} />
+
+            {/* DoctorDashboard */}
+
           </Routes>
         </main>
         {/* You can add a Footer component here */}
