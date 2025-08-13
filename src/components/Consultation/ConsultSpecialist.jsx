@@ -1,5 +1,3 @@
-// src/components/ConsultSpecialist.jsx
-
 import React from 'react';
 
 const specialists = [
@@ -15,21 +13,23 @@ const specialists = [
 const ConsultSpecialist = () => {
   return (
     <section className="mb-12">
-      <div className="flex items-center mb-6">
-        <div className="w-1/4">
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">Consult a Specialist</h2>
-          <p className="text-sm text-gray-600">Get an expert with 20 years of experience in their respective fields.</p>
-        </div>
-        <div className="flex-grow flex overflow-x-auto space-x-4 scrollbar-hide">
-          {specialists.map((item, index) => (
-            <div key={index} className="flex-none w-48 bg-white rounded-lg shadow-md p-4 text-center">
-              <img src={item.image} alt={item.title} className="h-24 w-auto mx-auto object-cover mb-2" />
-              <h4 className="text-md font-semibold text-gray-800">{item.title}</h4>
-              <p className="text-sm text-gray-500 mt-1">{item.price}</p>
-              <a href="#" className="text-blue-600 font-semibold text-sm mt-2 block">Book Now</a>
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">Consult a Specialist</h2>
+      <div className="flex overflow-x-auto gap-4 scrollbar-hide">
+        {specialists.map((item, index) => (
+          <div
+            key={index}
+            className="flex-none w-72 rounded-xl shadow-md p-4 bg-white hover:shadow-lg transition-shadow"
+          >
+            <h4 className="text-lg font-bold text-gray-800 mb-1">{item.title}</h4>
+            <p className="text-blue-600 font-semibold mb-2">{item.price}</p>
+            <div className="h-40 flex justify-center items-end overflow-hidden rounded-lg bg-gray-50">
+              <img src={item.image} alt={item.title} className="h-full object-contain" />
             </div>
-          ))}
-        </div>
+            <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">
+              Book Now
+            </button>
+          </div>
+        ))}
       </div>
     </section>
   );

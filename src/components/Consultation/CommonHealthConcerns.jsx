@@ -1,7 +1,7 @@
 // src/components/CommonHealthConcerns.jsx
 
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const concerns = [
   { title: 'Sexual problems', image: 'https://i.imgur.com/E8w9o2m.jpeg' },
   { title: 'Period problems, Gynae problems', image: 'https://i.imgur.com/m4P4Dq1.jpeg' },
@@ -24,10 +24,10 @@ const CommonHealthConcerns = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {concerns.map((concern, index) => (
-          <div key={index} className="bg-white rounded-lg shadow-md p-4 text-center">
+          <Link to="/search" key={index} className="bg-white rounded-lg shadow-md p-4 text-center">
             <img src={concern.image} alt={concern.title} className="h-32 w-full object-cover rounded-md mb-2" />
             <h4 className="text-md font-semibold text-gray-800">{concern.title}</h4>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

@@ -12,6 +12,9 @@ import WhyDocTime from './components/WhyDocTime'; // Assuming this component exi
 import SpecialtiesGrid from './components/SpecialtiesGrid'; // Assuming this component exists
 import BuyMedicinesBanner from './components/BuyMedicinesBanner'; // Import the new component
 import RecentBlogs from './components/RecentBlogs'; // Import the new component
+import SymptomsDepartmentView from './components/Consultation/SymptomsDepartmentView';
+import Search from './components/Search/AvailableDoctors';
+import ProfilePage from './components/DcotorDetailsView/ProfilePage';
 // ... other components
 
 function App() {
@@ -33,6 +36,9 @@ function App() {
               </>
             } />
             <Route path="/consultation" element={<ConsultationPage />} />
+            <Route path="/symptoms-department-views" element={<SymptomsDepartmentView />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/doctor-profile-view" element={<ProfilePage />} />
             {/* Add other routes here */}
           </Routes>
         </main>
